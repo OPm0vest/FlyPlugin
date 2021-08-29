@@ -1,0 +1,6 @@
+name: FlyPlugin
+version: '${project.version}'
+main: me.opm0vest.flyplugin.Main
+api-version: 1.17
+authors: [ OPm0vest ]
+description: A plugin that allows you to /fly. 
