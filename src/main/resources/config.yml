@@ -1,0 +1,14 @@
+#This plugin is free.
+#Report here if there are any bugs: https://github.com/OPm0vest/FlyPlugin/issues
+
+Console_Error_Message: 'You are NOT allow to execute this!'
+
+Fly_Enable: '&7[&6Fly&ePlugin&7]: &fFlight: &2Enabled!'
+
+Fly_Disable: '&7[&6Fly&ePlugin&7]: &fFlight: &4Disabled!'
+
+Insufficient_Player: '&7[&6Fly&ePlugin&7]: &fThat player does not exist!'
+
+Insufficient_Permission_Message: '&7[&6Fly&ePlugin&7]: &f&l"fp.fly.allow" is needed &r&fto execute "/fly".'
+
+Admin_Insufficient_Permission: '&7[&6Fly&ePlugin&7]: &f&l"fp.admin" is needed &r&fto "/fly" other players.'

@@ -1,7 +1,6 @@
 package me.opm0vest.flyplugin;
 
 import me.opm0vest.flyplugin.commands.FlyCommand;
-import me.opm0vest.flyplugin.commands.FlyUICommand;
 import me.opm0vest.flyplugin.commands.SpeedCommand;
 import me.opm0vest.flyplugin.util.Util;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -21,7 +20,7 @@ public class Main extends JavaPlugin {
 
         getCommand("speed").setExecutor(new SpeedCommand(this));
         getCommand("fly").setExecutor(new FlyCommand(this));
-        getCommand("fui").setExecutor(new FlyUICommand(this));
+        //getCommand("fui").setExecutor(new FlyUICommand(this));
 
         Main.instance = this;
     }

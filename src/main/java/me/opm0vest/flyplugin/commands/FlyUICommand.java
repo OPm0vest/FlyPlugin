@@ -12,7 +12,7 @@ import org.bukkit.plugin.Plugin;
 
 public class FlyUICommand implements CommandExecutor {
 
-    private Main main;
+    private final Main main;
 
     public FlyUICommand(Main main) {
         this.main = main;
@@ -27,7 +27,7 @@ public class FlyUICommand implements CommandExecutor {
             sender.sendMessage(Util.chat(this.main.getConfig().getString("Console_Error_Message")));
         }
         if (player.hasPermission("fp.fly.allow")) {
-            new mainFlyUI((Player) sender, this.main);
+            //new mainFlyUI((Player) sender, this.main);
         } else {
             player.sendMessage(Util.chat(""));
         }

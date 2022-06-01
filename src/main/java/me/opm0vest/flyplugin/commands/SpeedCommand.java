@@ -25,108 +25,112 @@ public class SpeedCommand implements CommandExecutor {
             if (!(sender instanceof Player)) {
                 sender.sendMessage(Util.chat(this.main.getConfig().getString("Console_Error_Message")));
             }
-
-            if (args.length == 0) {
+            if (args[1].equalsIgnoreCase("help")) {
                 player.sendMessage("speed help");
                 return false;
             }
-
-            if (args.length == 1) {
-                int speed = 1;
+            if (args.length == 0) {
+                int speed;
                 try {
                     speed = Integer.parseInt(args[0]);
                 } catch (NumberFormatException e) {
                     player.sendMessage("Only integer values are allowed here");
-                    return true;
+                    return false;
                 }
-                if (player.hasPermission("fly.speed") | player.hasPermission("fly.speed.10")) {
-                    if (speed < -10 || speed > 10) {
-                        player.sendMessage("Speed can't be less than -10 or more than 10");
-                    } else {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
-                    }
-                    return true;
+                if (speed < -10 || speed > 10) {
+                    player.sendMessage("Speed can't be less than -10 or more than 10");
                 }
-                if (player.hasPermission("fly.speed.9")) {
-                    if (speed <= 9) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+                if (player.isFlying()) {
+                    if (player.hasPermission("fly.speed.10") || player.hasPermission("fly.speed")) {
+                        if (speed == 10) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.8")) {
-                    if (speed <= 8) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+
+                    if (player.hasPermission("fly.speed.9") || player.hasPermission("fly.speed")) {
+                        if (speed == 9) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.7")) {
-                    if (speed <= 7) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+
+                    if (player.hasPermission("fly.speed.8") || player.hasPermission("fly.speed")) {
+                        if (speed == 8) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.6")) {
-                    if (speed <= 6) {
-                        player.setFlySpeed(speed / 10.0f);
+
+                    if (player.hasPermission("fly.speed.7") || player.hasPermission("fly.speed")) {
+                        if (speed == 7) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.5")) {
-                    if (speed <= 5) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+
+                    if (player.hasPermission("fly.speed.6") || player.hasPermission("fly.speed")) {
+                        if (speed == 6) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.4")) {
-                    if (speed <= 4) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+
+                    if (player.hasPermission("fly.speed.5") || player.hasPermission("fly.speed")) {
+                        if (speed == 5) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.3")) {
-                    if (speed <= 3) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+
+                    if (player.hasPermission("fly.speed.4") || player.hasPermission("fly.speed")) {
+                        if (speed == 4) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.2")) {
-                    if (speed <= 2) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+
+                    if (player.hasPermission("fly.speed.3") || player.hasPermission("fly.speed")) {
+                        if (speed == 3) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
-                }
-                if (player.hasPermission("fly.speed.1")) {
-                    if (speed <= 1) {
-                        player.setFlySpeed(speed / 10.0f);
-                        player.sendMessage("Flyspeed set to " + speed);
+
+                    if (player.hasPermission("fly.speed.8") || player.hasPermission("fly.speed")) {
+                        if (speed == 2) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
                     } else {
                         player.sendMessage("You don't have permission to do that");
                     }
-                    return true;
+
+                    if (player.hasPermission("fly.speed.1") || player.hasPermission("fly.speed")) {
+                        if (speed == 1) {
+                            player.setFlySpeed((float) speed / 10.0f);
+                            player.sendMessage("Flyspeed set to " + speed);
+                        }
+                    } else {
+                        player.sendMessage("You don't have permission to do that");
+                    }
+
                 }
                 player.sendMessage("You don't have permission to do that");
                 return true;

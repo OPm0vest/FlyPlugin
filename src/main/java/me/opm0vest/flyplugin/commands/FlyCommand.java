@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class FlyCommand implements CommandExecutor {
 
-    private Main main;
+    private final Main main;
     public ArrayList<Player> inFlightPlayers;
 
     public FlyCommand(Main main) {
@@ -29,7 +29,6 @@ public class FlyCommand implements CommandExecutor {
 
         String insufficientPermissionMessage = this.main.getConfig().getString("Insufficient_Permission_Message");
         insufficientPermissionMessage = insufficientPermissionMessage.replace("%player%", player.getDisplayName());
-
 
         if (!(sender instanceof Player)) {
             sender.sendMessage(Util.chat(this.main.getConfig().getString("Console_Error_Message")));

@@ -1,6 +1,9 @@
 name: FlyPlugin
 version: '${project.version}'
 main: me.opm0vest.flyplugin.Main
-api-version: 1.17
+api-version: 1.8
 authors: [ OPm0vest ]
-description: A plugin that allows you to /fly. 
+description: A plugin that allows you to /fly.
+commands:
+  fly:
+  speed:
