@@ -53,7 +53,7 @@ public class SpeedCommand implements CommandExecutor {
                     player.sendMessage("You don't have permission to do that");
                 }
             }
-            if (args[2] != null) {
+            if (args.length == 2) {
                 Player target = Bukkit.getPlayer(args[1]);
                 if (player.isFlying()) {
                     if (player.hasPermission("fly.speed")) {
